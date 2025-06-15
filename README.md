@@ -69,9 +69,14 @@
 ---
 
 ## 📸 Uygulama Görselleri
-ScreenShots/Ekran%20görüntüsü%202025-06-15%20195220.png
-
 > Bu bölümde çalışan sistemin görüntülerini görebilirsiniz.
+![1](ScreenShots/Ekran%20görüntüsü%202025-06-15%20195220.png)
+![2](ScreenShots/Ekran%20görüntüsü%202025-06-15%20195344.png)
+![3](ScreenShots/Ekran%20görüntüsü%202025-06-15%20195352.png)
+![4](ScreenShots/Ekran%20görüntüsü%202025-06-15%20195400.png)
+![5](ScreenShots/Ekran%20görüntüsü%202025-06-15%20195408.png)
+![6](ScreenShots/Ekran%20görüntüsü%202025-06-15%20195635.png)
+![7](ScreenShots/Ekran%20görüntüsü%202025-06-15%20195705.png)
 
 
 ---
