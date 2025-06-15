@@ -1,45 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>Tarifi Düzenle</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarifi Düzenle - Yemek Tarifi Sistemi</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #ff8800;">
         <div class="container-fluid">
-                <img src="{{AVATAR_SRC}}" alt="Profil Fotoğrafı" class="profile-avatar" style="width: 40px; height: 40px;">
-            <a class="navbar-brand text-success" href="index.php">Yemek Tarifi Sistemi</a>
-            <div id="navbarNav">
-                <ul class="navbar-nav">
+            <div class="navbar-brand-container">
+                <img src="{{AVATAR_SRC}}" alt="Profil Fotoğrafı" class="profile-img" style="width: 40px; height: 40px;">
+                <a class="navbar-brand text-success" href="index.php">Yemek Tarifi Sistemi</a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
                     {{NAVBAR_CONTENT}}
                 </ul>
             </div>
         </div>
     </nav>
-    <div class="container mt-5">
+
+    <div class="container mt-5 pt-5">
         <h2>Tarifi Düzenle</h2>
         {{ERRORS}}
-        <form action="edit_recipe.php?id={{RECIPE_ID}}" method="post">
+        <form action="" method="post" class="mt-4">
             <div class="mb-3">
                 <label for="name" class="form-label">Tarif Adı</label>
-                <input type="text" id="name" name="name" class="form-control" value="{{RECIPE_NAME}}" required>
+                <input type="text" class="form-control" id="name" name="name" value="{{RECIPE_NAME}}" required>
             </div>
             <div class="mb-3">
                 <label for="ingredients" class="form-label">Malzemeler</label>
-                <textarea id="ingredients" name="ingredients" rows="5" class="form-control" required>{{INGREDIENTS}}</textarea>
+                <textarea class="form-control" id="ingredients" name="ingredients" rows="5" required>{{INGREDIENTS}}</textarea>
             </div>
             <div class="mb-3">
                 <label for="preparation_method" class="form-label">Hazırlanış</label>
-                <textarea id="preparation_method" name="preparation_method" rows="5" class="form-control" required>{{PREPARATION_METHOD}}</textarea>
+                <textarea class="form-control" id="preparation_method" name="preparation_method" rows="5" required>{{PREPARATION_METHOD}}</textarea>
             </div>
             <div class="mb-3">
                 <label for="portion_count" class="form-label">Porsiyon Sayısı</label>
-                <input type="number" id="portion_count" name="portion_count" min="1" class="form-control" value="{{PORTION_COUNT}}" required>
+                <input type="number" class="form-control" id="portion_count" name="portion_count" value="{{PORTION_COUNT}}" min="1" required>
             </div>
             <button type="submit" class="btn btn-primary">Tarifi Güncelle</button>
+            <a href="dashboard.php" class="btn btn-secondary">İptal</a>
         </form>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
