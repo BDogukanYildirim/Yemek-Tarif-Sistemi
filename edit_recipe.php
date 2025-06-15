@@ -89,7 +89,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 include 'templates/edit_recipe.html';
-aa
+$template = file_get_contents('templates/edit_recipe.html');
 $template = str_replace('{{AVATAR_SRC}}', $avatar_src, $template);
 echo $template;
 ?>
