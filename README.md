@@ -82,5 +82,5 @@
 ---
 
 ## 🎥 Tanıtım Videosu
-![Youtube](https://youtu.be/vmIjUJSimGg)
+https://youtu.be/vmIjUJSimGg
 
