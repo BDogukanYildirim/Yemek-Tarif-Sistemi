@@ -69,7 +69,7 @@
 ---
 
 ## 📸 Uygulama Görselleri
-![Görsel 1](./ScreenShots/Ekran görüntüsü 2025-06-15 195220.png)
+![Görsel 1](ScreenShots/Ekran görüntüsü 2025-06-15 195220.png)
 
 > Bu bölümde çalışan sistemin görüntülerini görebilirsiniz.
 
