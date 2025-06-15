@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kontrol Paneli</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #ff8800;">
+        <div class="container-fluid">
+                <img src="{{AVATAR_SRC}}" alt="Profil Fotoğrafı" class="profile-avatar" style="width: 40px; height: 40px;">
+            <a class="navbar-brand text-success" href="index.php">Yemek Tarifi Sistemi</a>
+            <div id="navbarNav">
+                <ul class="navbar-nav">
+                    {{NAVBAR_CONTENT}}
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <h2>Hoş Geldin, {{USER_NAME}}!</h2>
+        <a href="add_recipe.php" class="btn btn-primary mb-3">Yeni Tarif Ekle</a>
+        <h3>Tariflerin</h3>
+        <div class="row">
+            {{RECIPES}}
+        </div>
+    </div>
+</body>
+</html>

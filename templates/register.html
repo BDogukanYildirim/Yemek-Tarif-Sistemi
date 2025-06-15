@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kayıt Ol</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #ff8800;">
+        <div class="container-fluid">
+            <div class="navbar-brand-container">
+                <img src="{{AVATAR_SRC}}" alt="Profil Fotoğrafı" class="profile-avatar" style="width: 40px; height: 40px;">
+                <a class="navbar-brand text-success" href="index.php">Yemek Tarifi Sistemi</a>
+            </div>
+            <div id="navbarNav">
+                <ul class="navbar-nav">
+                    {{NAVBAR_CONTENT}}
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <h2>Kayıt Ol</h2>
+        {{ERRORS}}
+        <form action="register.php" method="post" enctype="multipart/form-data" class="needs-validation" novalidate>
+            <div class="mb-3">
+                <label for="username" class="form-label">Kullanıcı Adı</label>
+                <input type="text" name="username" class="form-control" id="username" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">E-posta</label>
+                <input type="email" name="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="first_name" class="form-label">Ad</label>
+                <input type="text" name="first_name" class="form-control" id="first_name" required>
+            </div>
+            <div class="mb-3">
+                <label for="last_name" class="form-label">Soyad</label>
+                <input type="text" name="last_name" class="form-control" id="last_name" required>
+            </div>
+            <div class="mb-3">
+                <label for="gsm_no" class="form-label">Telefon Numarası</label>
+                <input type="text" name="gsm_no" class="form-control" id="gsm_no" required>
+            </div>
+            <div class="mb-3">
+                <label for="birth_date" class="form-label">Doğum Tarihi</label>
+                <input type="date" name="birth_date" class="form-control" id="birth_date" required>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Şifre</label>
+                <input type="password" name="password" class="form-control" id="password" required>
+            </div>
+            <div class="mb-3">
+                <label for="avatar" class="form-label">Profil Fotoğrafı</label>
+                <input type="file" name="avatar" class="form-control" id="avatar" accept="image/png,image/jpeg,image/jpg" required>
+            </div>
+            <div class="mb-3 form-check">
+                <input type="checkbox" name="terms" class="form-check-input" id="terms" required>
+                <label for="terms" class="form-check-label">Siteyi kullanırken tarif oluşturmak dışında başka hiçbir şey yapmayacağımı, oluşturduğum tarif bir yiyecek tarifi dışında birşey ifade ederse hakkımdaki uzaklaştırmayı ve olası durumlarda verilerimin yetkili kolluk kuvvetleriyle paylaşılacağını kabul ediyorum.</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Kayıt Ol</button>
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tarifi Düzenle</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #ff8800;">
+        <div class="container-fluid">
+                <img src="{{AVATAR_SRC}}" alt="Profil Fotoğrafı" class="profile-avatar" style="width: 40px; height: 40px;">
+            <a class="navbar-brand text-success" href="index.php">Yemek Tarifi Sistemi</a>
+            <div id="navbarNav">
+                <ul class="navbar-nav">
+                    {{NAVBAR_CONTENT}}
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <h2>Tarifi Düzenle</h2>
+        {{ERRORS}}
+        <form action="edit_recipe.php?id={{RECIPE_ID}}" method="post">
+            <div class="mb-3">
+                <label for="name" class="form-label">Tarif Adı</label>
+                <input type="text" id="name" name="name" class="form-control" value="{{RECIPE_NAME}}" required>
+            </div>
+            <div class="mb-3">
+                <label for="ingredients" class="form-label">Malzemeler</label>
+                <textarea id="ingredients" name="ingredients" rows="5" class="form-control" required>{{INGREDIENTS}}</textarea>
+            </div>
+            <div class="mb-3">
+                <label for="preparation_method" class="form-label">Hazırlanış</label>
+                <textarea id="preparation_method" name="preparation_method" rows="5" class="form-control" required>{{PREPARATION_METHOD}}</textarea>
+            </div>
+            <div class="mb-3">
+                <label for="portion_count" class="form-label">Porsiyon Sayısı</label>
+                <input type="number" id="portion_count" name="portion_count" min="1" class="form-control" value="{{PORTION_COUNT}}" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Tarifi Güncelle</button>
+        </form>
+    </div>
+</body>
+</html>

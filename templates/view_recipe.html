@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tarifi Görüntüle</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #ff8800;">
+        <div class="container-fluid">
+                <img src="{{AVATAR_SRC}}" alt="Profil Fotoğrafı" class="profile-avatar" style="width: 40px; height: 40px;">
+            <a class="navbar-brand text-success" href="index.php">Yemek Tarifi Sistemi</a>
+            <div id="navbarNav">
+                <ul class="navbar-nav">
+                    {{NAVBAR_CONTENT}}
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <h2>{{RECIPE_NAME}}</h2>
+        <div class="card">
+            <div class="card-body">
+                <h5>Malzemeler:</h5>
+                <p>{{INGREDIENTS}}</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h5>Hazırlanış:</h5>
+                <p>{{PREPARATION_METHOD}}</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h5>Porsiyon Sayısı:</h5>
+                <p>{{PORTION_COUNT}}</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h5>Ekleyen:</h5>
+                <p>{{USER_NAME}}</p>
+            </div>
+        </div>
+        {{ACTION_BUTTONS}}
+        <a href="all_recipes.php" class="btn btn-primary mt-3">Tüm Tariflere Geri Dön</a>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
